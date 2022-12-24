@@ -5,12 +5,18 @@
     <meta charset="utf-8">
     <title>Dressbook | Look Better, Get Better </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="description" content="Welcome to Dressbook - Where the world comes to take on a new look. Shop The No. 1 clothing and accessories online marketplace in Nigeria.">
+    <meta name="description" content="Welcome to Dressbook - Where the world comes to put on a new look. Shop The #1 clothing and accessories online marketplace in Nigeria.">
     <meta name="keywords" content="dressbook">
     
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
+    
+     <!-- open graph meta -->
+     <meta property="og:title" content="Dressbook: Look Better, Get Better">
+     <meta property="og:description" content="Your online shopping destination for the best clothing and fashion items.">
+     <meta property="og:url" content="https://dressbookstore.com">
+     <meta property="og:image" content="assets/DBbrand.png">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -33,29 +39,16 @@
         <div class="row bg-secondary py-1 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
                 <div class="d-inline-flex align-items-center h-100">
-                    <a class="text-body mr-3" href="">About</a>
-                    <a class="text-body mr-3" href="">Contact</a>
-                    <a class="text-body mr-3" href="">Help</a>
+                    <a class="text-body mr-3" href="profile.html">About</a>
+                    <a class="text-body mr-3" href="contact.html">Contact</a>
+                    <a class="text-body mr-3" href="checkout.html">Help</a>
                     <a class="text-body mr-3" href="">FAQs</a>
                 </div>
             </div>
             <div class="col-lg-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">My Account</button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <button class="dropdown-item" type="button">Sign in</button>
-                            <button class="dropdown-item" type="button">Sign up</button>
-                        </div>
-                    </div>
-                    <div class="btn-group mx-2">
-                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">USD</button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <button class="dropdown-item" type="button">EUR</button>
-                            <button class="dropdown-item" type="button">GBP</button>
-                            <button class="dropdown-item" type="button">NGN</button>
-                        </div>
-                    </div>
+                    <a class="text-body mr-3" href="signin.html">Sign In</a>
+                
                     <div class="btn-group">
                         <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">General</button>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -66,7 +59,7 @@
                     </div>
                 </div>
                 <div class="d-inline-flex align-items-center d-block d-lg-none">
-                    <a href="checkout.html" class="btn px-0 ml-2">
+                    <a href="profile.html" class="btn px-0 ml-2">
                         <i class="fas fa-heart text-dark"></i>
                         <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
                     </a>
@@ -81,7 +74,7 @@
             <div class="col-lg-4">
                 <a href="index.html" class="text-decoration-none">
                     <img src="img/logo2.png" alt="" height="50px" width="50px">
-                    <img src="img/logo.png" alt="">
+                    <img src="img/logo.png" alt="" >
                 </a>
             </div>
             <div class="col-lg-4 col-6 text-left">
@@ -89,12 +82,11 @@
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search for products">
                         <div class="input-group-append">
-                            <span class="input-group-text bg-transparent text-primary">
-                                <i class="fa fa-search"></i>
-                            </span>
+                            <button class="btn btn-primary">Search</button>
                         </div>
                     </div>
                 </form>
+                
             </div>
             <div class="col-lg-4 col-6 text-right">
                 <p class="m-0">Customer Service</p>
@@ -137,29 +129,26 @@
             </div>
             <div class="col-lg-9">
                 <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
-                    <a href="" class="text-decoration-none d-block d-lg-none">
-                        
-                        <img src="img/logo.png" alt="">
+                    <a href="index.html" class="text-decoration-none d-block d-lg-none">
+                        <img src="img/logo.png" alt="" width="150px">
                     </a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span><i class="fa fa-search"></i></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div id="large" class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link active">Shop Dignity</a>
+                            <a href="shop.html" class="nav-item nav-link active">Shop Dignity</a>
                             <a href="shop.html" class="nav-item nav-link">Shop Beauty</a>
-                            <a href="detail.html" class="nav-item nav-link">Shop Esteem</a>
-                            <a href="signin.html" class="nav-item nav-link">Shop Brands</a>
-                            <a href="profile.html" class="nav-item nav-link">Chapters Blog</a>
+                            <a href="shop.html" class="nav-item nav-link">Shop Esteem</a>
+                            <a href="shop.html" class="nav-item nav-link">Shop Brands</a>
+                            <a href="chapters.html" class="nav-item nav-link">Chapters Blog</a>
                         </div>
                         <div id="small" class="navbar-nav mr-auto py-0">
                             <form action="">
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Search for products">
                                     <div class="input-group-append">
-                                        <span class="input-group-text bg-transparent text-primary">
-                                            <i class="fa fa-search"></i>
-                                        </span>
+                                        <button class="btn btn-primary">Search</button>
                                     </div>
                                 </div>
                             </form>

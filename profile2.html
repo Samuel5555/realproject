@@ -5,12 +5,18 @@
     <meta charset="utf-8">
     <title>Dressbook | Look Better, Get Better </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="description" content="Welcome to Dressbook - Where the world comes to take on a new look. Shop The No. 1 clothing and accessories online marketplace in Nigeria.">
+    <meta name="description" content="Welcome to Dressbook - Where the world comes to put on a new look. Shop The #1 clothing and accessories online marketplace in Nigeria.">
     <meta name="keywords" content="dressbook">
     
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
+    
+     <!-- open graph meta -->
+     <meta property="og:title" content="Dressbook: Look Better, Get Better">
+     <meta property="og:description" content="Your online shopping destination for the best clothing and fashion items.">
+     <meta property="og:url" content="https://dressbookstore.com">
+     <meta property="og:image" content="assets/DBbrand.png">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,38 +31,97 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/profilestyle.css" rel="stylesheet">
+
+    
+<style type="text/css">
+    body{
+        background: #f7f7ff;
+    }
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 0 solid transparent;
+        border-radius: .25rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
+    }
+    .me-2 {
+        margin-right: .5rem!important;
+    }
+    /* Style the form */
+    #regForm {
+      background-color: #ffffff;
+      /* margin: 100px auto; */
+      padding: 40px;
+      width: 90%;
+      min-width: 300px;
+    }
+    
+    /* Style the input fields */
+    input, select {
+      padding: 10px;
+      width: 100%;
+      font-size: 17px;
+      font-family: Raleway;
+      border: 1px solid #aaaaaa;
+    }
+    
+    /* Mark input boxes that gets an error on validation: */
+    input.invalid {
+      background-color: #ffdddd;
+    }
+    
+    /* Hide all steps by default: */
+    .tab {
+      display: none;
+    }
+    
+    /* Make circles that indicate the steps of the form: */
+    .step {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbbbbb;
+      border: none;
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0.5;
+    }
+    
+    /* Mark the active step: */
+    .step.active {
+      opacity: 1;
+    }
+    
+    /* Mark the steps that are finished and valid: */
+    .step.finish {
+      background-color: #04AA6D;
+    }
+    </style>
+    
 </head>
 
 <body>
-    <!-- Topbar Start -->
-    <div class="container-fluid">
+       <!-- Topbar Start -->
+       <div class="container-fluid">
         <div class="row bg-secondary py-1 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
                 <div class="d-inline-flex align-items-center h-100">
-                    <a class="text-body mr-3" href="">About</a>
-                    <a class="text-body mr-3" href="">Contact</a>
-                    <a class="text-body mr-3" href="">Help</a>
+                    <a class="text-body mr-3" href="profile.html">About</a>
+                    <a class="text-body mr-3" href="contact.html">Contact</a>
+                    <a class="text-body mr-3" href="checkout.html">Help</a>
                     <a class="text-body mr-3" href="">FAQs</a>
                 </div>
             </div>
             <div class="col-lg-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">My Account</button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <button class="dropdown-item" type="button">Sign in</button>
-                            <button class="dropdown-item" type="button">Sign up</button>
-                        </div>
-                    </div>
-                    <div class="btn-group mx-2">
-                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">USD</button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <button class="dropdown-item" type="button">EUR</button>
-                            <button class="dropdown-item" type="button">GBP</button>
-                            <button class="dropdown-item" type="button">NGN</button>
-                        </div>
-                    </div>
+                    <a class="text-body mr-3" href="signin.html">Sign In</a>
+                
                     <div class="btn-group">
                         <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">General</button>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -67,7 +132,7 @@
                     </div>
                 </div>
                 <div class="d-inline-flex align-items-center d-block d-lg-none">
-                    <a href="checkout.html" class="btn px-0 ml-2">
+                    <a href="profile.html" class="btn px-0 ml-2">
                         <i class="fas fa-heart text-dark"></i>
                         <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
                     </a>
@@ -82,7 +147,7 @@
             <div class="col-lg-4">
                 <a href="index.html" class="text-decoration-none">
                     <img src="img/logo2.png" alt="" height="50px" width="50px">
-                    <img src="img/logo.png" alt="">
+                    <img src="img/logo.png" alt="" >
                 </a>
             </div>
             <div class="col-lg-4 col-6 text-left">
@@ -90,12 +155,11 @@
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search for products">
                         <div class="input-group-append">
-                            <span class="input-group-text bg-transparent text-primary">
-                                <i class="fa fa-search"></i>
-                            </span>
+                            <button class="btn btn-primary">Search</button>
                         </div>
                     </div>
                 </form>
+                
             </div>
             <div class="col-lg-4 col-6 text-right">
                 <p class="m-0">Customer Service</p>
@@ -138,29 +202,26 @@
             </div>
             <div class="col-lg-9">
                 <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
-                    <a href="" class="text-decoration-none d-block d-lg-none">
-                        
-                        <img src="img/logo.png" alt="">
+                    <a href="index.html" class="text-decoration-none d-block d-lg-none">
+                        <img src="img/logo.png" alt="" width="150px">
                     </a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span><i class="fa fa-search"></i></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div id="large" class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link active">Shop Dignity</a>
+                            <a href="shop.html" class="nav-item nav-link active">Shop Dignity</a>
                             <a href="shop.html" class="nav-item nav-link">Shop Beauty</a>
-                            <a href="detail.html" class="nav-item nav-link">Shop Esteem</a>
-                            <a href="signin.html" class="nav-item nav-link">Shop Brands</a>
-                            <a href="profile.html" class="nav-item nav-link">Chapters Blog</a>
+                            <a href="shop.html" class="nav-item nav-link">Shop Esteem</a>
+                            <a href="shop.html" class="nav-item nav-link">Shop Brands</a>
+                            <a href="chapters.html" class="nav-item nav-link">Chapters Blog</a>
                         </div>
                         <div id="small" class="navbar-nav mr-auto py-0">
                             <form action="">
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Search for products">
                                     <div class="input-group-append">
-                                        <span class="input-group-text bg-transparent text-primary">
-                                            <i class="fa fa-search"></i>
-                                        </span>
+                                        <button class="btn btn-primary">Search</button>
                                     </div>
                                 </div>
                             </form>
@@ -184,63 +245,227 @@
     <!-- Navbar End -->
 
 
-    <!-- Breadcrumb Start -->
-    <div class="container-fluid">
-        <div class="row px-xl-5">
-            <div class="col-12">
-                <nav class="breadcrumb bg-light mb-30">
-                    <a class="breadcrumb-item text-dark" href="#">Home</a>
-                    <span class="breadcrumb-item active">Contact</span>
-                </nav>
-            </div>
-        </div>
-    </div>
-    <!-- Breadcrumb End -->
 
+    <div class="container">
+		<div class="main-body">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="card">
+						<div class="card-body">
+							<div class="d-flex flex-column align-items-center text-center">
+								<img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+								<div class="mt-3">
+									<h4>John Doe</h4>
+									<p class="text-muted font-size-sm">Owner, John Fashion Store</p>
+									<div style="display:inline-flex;">
+										<p class="mb-1">Business-to-Consumer</p> &nbsp;|&nbsp; 
+										<p class="mb-1">Enugu, Nigeria</p> 
+									</div><br>
+									<div style="display:inline-flex;">
+										<p class="mb-1">Joined since: 2022</p> &nbsp;|&nbsp; 
+										<p class="mb-1">Active until: Today</p> 
+									</div><br>
+									<div style="display:inline-flex;">
+										<p class="mb-1">315 Followers</p> &nbsp;|&nbsp;
+										<p class="mb-1">115 Following</p> 
+									</div><br>
+									<p class="text-muted font-size-sm">@Johnnn</p>
+									<button class="btn btn-primary">Follow</button>
+									<button class="btn btn-outline-primary">Message</button>
+								</div>
+							</div>
+							<hr class="my-4">
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+									<h6 class="mb-0"><i class="fa fa-list"></i>
+                                        <a href="#" >Listings</a></h6>
+									<span class="">12</span>
+								</li>
+								<li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+									<h6 class="mb-0"><i class="fa fa-star"></i>
+                                        <a href="#" >Sales and Reviews</a></h6>
+									<span class="">8</span>
+								</li>
+								<li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+									<h6 class="mb-0"><i class="fa fa-thumbs-up"></i>
+                                        <a href="#" >Likes</a></h6>
+									<span class="">123</span>
+								</li>
+								<li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+									<h6 class="mb-0"><i class="fa fa-info-circle"></i>
+                                        <a href="#" >About</a></h6>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-body">
+							<h5 class="d-flex align-items-center mb-3">Announcement</h5>
+							<p>Shop Opens around 8am and closes 9pm</p>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8">
+					<div class="card">
+						<div class="card-body">
 
-<div class="container bootstrap snippets bootdey">
-<div class="row">
-  <div class="profile-nav col-md-3">
-      <div class="panel">
-          <div class="user-heading round">
-              <a href="#">
-                  <img src="img/user.jpg" alt="">
-              </a>
-              <h1>Camila Smith</h1>
-              <p>@camillathequeen</p>
-              <!-- <p>Business-to-Consumer | Nigeria</p> -->
-              <!-- <p>Joined since: 2022 | Active until: Today </p> -->
-              <p>0 followers | 0 following</p>
-              <button>Account</button> <button href="">Edit</button>
-          </div>
+							<a href="#shopperDetails"  onclick="prepareRegister()" style="background-color: orange; margin-bottom: 10px; text-decoration: underline;" class="btn btn-orange btn-lg py-3 btn-block">Create your first listing and unlock your seller profile.  Its free and a huge bonus awaits you.</a>
 
-          <ul class="nav nav-pills nav-stacked">
-              <li class="active"><a href="#"> <i class="fa fa-user"></i> Listings (120)</a></li>
-              <li><a href="#"> <i class="fa fa-calendar"></i> Sales and Reviews (23)</a></li>
-              <li><a href="#"> <i class="fa fa-edit"></i> Likes (44)</a></li> 
-              <li><a href="#"> <i class="fa fa-edit"></i> About </a></li> 
-          </ul>
-      </div>
-  </div>
-  <div class="profile-info col-md-9">
-      <div class="panel">
+							<form id="regForm" style="display:none;" action="">
+								
+								<!-- One "tab" for each step in the form: -->
+								<div class="tab">
+									<h4>Shop Details:</h4>
+								  <p>Name of Shop/Boutique<input placeholder="Name of Shop/Boutique" oninput="this.className = ''"></p>
+								
 
-        <div class="center">
-            <h4>Create your first listing and unlock your seller profile.  Its free and a huge bonus awaits you.</h4>
-            <form>
-              <div class="inputbox">
-                <input type="button" value="Lets Get Started">
-              </div>
-            </form>
-          </div>
-      </div>
-     
-          </div>
-      </div>
-  </div>
-</div>
-</div>
+								 <p>Tag<select name="Tag" id="">
+									<option value=" " name="" id="">I am the owner of the shop </option>
+									<option value=" " name="" id="">I am a representative of the shop</option>
+									<option value=" " name="" id="">I have no shop, I am selling as an Individual</option>
+								  </select></p>
 
+								 <p>Seller Category<select name="Seller Category" id="">
+									<option value="Business-to-Consumer">Business-to-Consumer</option>
+									<option value="Consumer-to-Consumer">Consumer-to-Consumer</option>
+								  </select></p>
+
+								  <p>Location<select name="Location" id="">
+									<option value="Abia, Nigeria">Abia, Nigeria</option>
+									<option value="Enugu, Nigeria">Enugu, Nigeria</option>
+									<option value="Lagos, Nigeria">Lagos, Nigeria</option>
+									<option value="Abuja, Nigeria">Abuja, Nigeria</option>
+								  </select></p>
+
+								  <p>Shop Address/Nearest Landmark<input placeholder="Shop Address/Landmark" oninput="this.className = ''"></p>
+
+								  <p>Shop Size<select name="Shop Size" id=""> 
+									<option value="">Small (1-4 employees)</option>
+                    				<option value="">Medium (4-12 employees)</option>
+                    				<option value="">Large (>12 employees)</option>
+								  </select></p>
+
+								  <p>Shop Collections<select name="Shop Collections" id=""> 
+									<option>Watches</option>
+                    				<option>Shirts</option>
+                    				<option>Others</option>
+								  </select></p>
+
+								  <p>Announcement</p><textarea placeholder="Other things you want other people to know about " oninput="this.className = ''" cols="40" rows="8"></textarea> 
+
+								</div>
+								
+								<div class="tab">
+									<h4>Listing Details:</h4>
+									<p>Listing Type<select name="Listing Type" id=""> 
+										<option>Temporary (only 1 available)</option>
+										<option>Permanent (available in stock)</option>
+									  </select></p>
+	
+									<p>Photos of Item<input type="file" placeholder="Photos of Item" oninput="this.className = ''">Add photo </p>
+
+								  <p>Name of Item<input type="text" placeholder="Name of Item" oninput="this.className = ''"></p>
+								  
+								  <p>Item Classification<select name="Item" id=""> 
+									<option>Watches</option>
+                    				<option>Shirts</option>
+                    				<option>Others</option>
+								  </select></p>
+
+								  <p>Item Description</p><textarea placeholder="Description should be in paragraphs. The first paragraph should be the topic sentence (main and summarised description) while other additional description can follow in the other paragraphs" oninput="this.className = ''" cols="40" rows="8"></textarea> 
+								 
+                                  <p>Item Price (#)<input type="number" placeholder="Price of the listed item" oninput="this.className = ''"></p>
+								  
+								  <p>Gender<select name="Item" id=""> 
+									<option>For Men</option>
+                    				<option>For Women</option>
+                    				<option>For Kids</option>
+								  </select></p>
+
+								  <p>Size<select name="Item" id=""> 
+									<option>XS</option>
+                    				<option>S</option>
+                    				<option>M</option>
+                    				<option>L</option>
+                    				<option>XL</option>
+								  </select></p>
+								  
+								  <p>Occasion<select name="Item" id=""> 
+									<option>#dignity</option>
+									<option>#beauty</option>
+									<option>#esteem</option>
+								  </select></p>
+								
+								</div>
+								
+								<div class="tab">
+									<h4>Listing Details (optional):</h4>
+									<p>Colour<select name="Item" id=""> 
+										<option>vary</option>
+										<option>red</option>
+										<option>green</option>
+										<option>yellow</option>
+										<option>Others</option>
+									  </select></p>
+									
+									<p>Material<select name="Item" id=""> 
+										<option>vary</option>
+										<option>Cotton</option>
+										<option>Elastic</option>
+										<option>Wool</option>
+										<option>Others</option>
+									  </select></p>
+									
+									<p>Brand<select name="Item" id=""> 
+										<option>vary</option>
+										<option>Nike</option>
+										<option>Givenchy</option>
+										<option>Underamour</option>
+										<option>Others</option>
+									  </select></p>
+									
+									<p>Item Classification<select name="Item" id=""> 
+										<option>Brand New </option>
+										<option>Second Hand (or Used)</option>
+										<option>Recycled</option>
+										<option>Vintage (over 22 years old)</option>
+									  </select></p>
+									
+									<p>Emphasis (top true qualities of the item that buyers may be interested in): <select name="Item" id=""> 
+											<option>High Quality </option>
+											<option>Low Price</option>
+											<option>Free Returns</option>
+											<option>Others</option>
+									  </select></p>
+								
+								</div>
+								
+								
+								<div style="overflow:auto;">
+								  <div style="float:right;">
+									<button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+									<button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+								  </div>
+								</div>
+								
+								<!-- Circles which indicates the steps of the form: -->
+								<div style="text-align:center;margin-top:40px;">
+								  <span class="step"></span>
+								  <span class="step"></span>
+								  <span class="step"></span>
+								</div>
+								
+								</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-secondary mt-5 pt-5">
         <div class="row px-xl-5 pt-5">
@@ -260,10 +485,17 @@
                     <div class="col-md-4 mb-5">
                         <h5 class="text-secondary text-uppercase mb-4">Buy Productively</h5>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Men</a>
-                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Women</a>
-                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Accessories</a>
-                            <a class= "text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Kids</a>
+                           
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Men Dignity</a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Men Beauty</a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Men Esteem</a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Women Dignity</a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Women Beauty</a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Women Esteem</a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Dignity Accessories</a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Beauty Accessories</a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Esteem Accessories</a>
+                            <a class= "text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Kids </a>
                             <a class= "text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shipping & Returns</a>
                         </div>
                     </div>
@@ -302,8 +534,9 @@
         <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
             <div class="col-md-6 px-xl-0">
                 <p class="mb-md-0 text-center text-md-left text-secondary">
-                    &copy; <a class="text-primary" href="#">Dressbook Stores Ltd </a>. All Rights Reserved. <a class="text-primary" href="https://htmlcodex.com">Terms & Conditions</a>
+                    Copyright &copy; <script>document.write(new Date().getFullYear());</script> Dressbook Stores Ltd. All Rights Reserved. <a class="text-primary" href="https://htmlcodex.com">Terms & Conditions</a>.
                     <a class="text-primary" href="https://htmlcodex.com">Privacy Policy</a>
+
                 </p>
             </div>
             <div class="col-md-6 px-xl-0 text-center text-md-right">
@@ -318,6 +551,86 @@
     <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
+
+<script type="text/javascript">
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form ...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  // ... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  // ... and run a function that displays the correct step indicator:
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form... :
+  if (currentTab >= x.length) {
+    //...the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false:
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class to the current step:
+  x[n].className += " active";
+}
+
+function prepareRegister(){
+  document.getElementById("regForm").style.display = "block";
+}
+</script>
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -330,6 +643,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
 
+
+</body>
 </html>
